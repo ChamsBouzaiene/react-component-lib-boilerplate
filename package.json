@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o docs-build -s ./stories/assets",
     "chromatic": "chromatic --exit-zero-on-changes"
   },
   "repository": {
@@ -31,6 +31,7 @@
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
     "@storybook/react": "^6.2.9",
+    "@storybook/storybook-deployer": "^2.8.8",
     "@types/styled-components": "^5.1.9",
     "babel-loader": "^8.2.2",
     "chromatic": "^5.8.0",
