@@ -1,11 +1,16 @@
 import React from 'react';
-import './button.css';
+import { ThemedButton } from "./Button.styled"
+import { SpaceProps, FontSizeProps } from 'styled-system'
 
-export interface ButtonProps {
+export interface ButtonProps extends SpaceProps, FontSizeProps {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean;
+
+  borderRadius?: 0 | 2 | 4 | 8
+
+
+  variant?: 'primary' | 'secondary' | 'warning' | 'danger' | 'white';
   /**
    * What background color to use
    */
@@ -27,22 +32,21 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button: React.FC<ButtonProps> = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
+const Button: React.FC<ButtonProps> = ({
+  variant,
+  size,
   label,
   ...props
-}) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
-  );
-};
+}) =>
+  <ThemedButton variant={variant} size={size} {...props}>
+    {label}
+  </ThemedButton>
+
+Button.defaultProps = {
+  variant: 'primary',
+  size: 'small',
+  borderRadius: 2
+}
+
+export default Button
+
