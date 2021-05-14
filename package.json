@@ -43,6 +43,7 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
+    "@storybook/addon-a11y": "^6.2.9",
     "storybook-addon-styled-component-theme": "^2.0.0"
   }
 }
