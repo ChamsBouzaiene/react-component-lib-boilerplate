@@ -12,24 +12,24 @@ const Template: Story<Props> = (args) => <Title {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    children: "Welcome",
+    children: 'Welcome',
 };
 
 export const small = Template.bind({});
 small.args = {
-    children: "Welcome",
-    fontSize: 25
+    children: 'Welcome',
+    fontSize: 25,
 };
 
 export const Colorful = Template.bind({});
 Colorful.args = {
-    children: "Welcome",
-    color: "tomato"
+    children: 'Welcome',
+    color: 'tomato',
 };
 
 export const MonoText = Template.bind({});
 MonoText.args = {
-    children: "Welcome",
-    color: "tomato",
-    fontFamily: 'monospace'
+    children: 'Welcome',
+    color: 'tomato',
+    fontFamily: 'monospace',
 };
