@@ -30,7 +30,7 @@ export interface ButtonProps extends SpaceProps, FontSizeProps {
 }
 
 /**
- * Primary UI component for user interaction
+ * Button UI component for user interaction
  */
 const Button: React.FC<ButtonProps> = ({ variant, size, label, ...props }) => (
     <ThemedButton variant={variant} size={size} {...props}>

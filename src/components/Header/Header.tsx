@@ -10,9 +10,7 @@ export interface HeaderProps {
     onCreateAccount: () => void;
 }
 
-//type MyComponentProps = PropTypes.InferProps<typeof propTypes>;
-
-export const Header: React.FC<HeaderProps> = ({ user, onLogin, onLogout, onCreateAccount }) => (
+const Header: React.FC<HeaderProps> = ({ user, onLogin, onLogout, onCreateAccount }) => (
     <header>
         <Container>
             <div>
@@ -47,3 +45,5 @@ Header.propTypes = {
     onLogout: PropTypes.func.isRequired,
     onCreateAccount: PropTypes.func.isRequired,
 };
+
+export default Header;
