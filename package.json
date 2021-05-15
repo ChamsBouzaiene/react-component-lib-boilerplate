@@ -1,49 +1,68 @@
 {
-  "name": "react-component-lib-boilerplate",
-  "version": "1.0.0",
-  "description": "a boilerplate for creating react components library",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs-build -s ./stories/assets",
-    "chromatic": "chromatic --exit-zero-on-changes"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ChamsBouzaiene/react-component-lib-boilerplate.git"
-  },
-  "keywords": [
-    "react",
-    "library",
-    "storybook",
-    "components"
-  ],
-  "author": "Chamsddine Bouzaiene",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ChamsBouzaiene/react-component-lib-boilerplate/issues"
-  },
-  "homepage": "https://github.com/ChamsBouzaiene/react-component-lib-boilerplate#readme",
-  "devDependencies": {
-    "@babel/core": "^7.14.2",
-    "@storybook/addon-actions": "^6.2.9",
-    "@storybook/addon-essentials": "^6.2.9",
-    "@storybook/addon-links": "^6.2.9",
-    "@storybook/react": "^6.2.9",
-    "@storybook/storybook-deployer": "^2.8.8",
-    "@types/styled-components": "^5.1.9",
-    "@types/styled-system": "^5.1.11",
-    "babel-loader": "^8.2.2",
-    "chromatic": "^5.8.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "styled-components": "^5.3.0",
-    "styled-system": "^5.1.5",
-    "typescript": "^4.2.4"
-  },
-  "dependencies": {
-    "@storybook/addon-a11y": "^6.2.9",
-    "storybook-addon-styled-component-theme": "^2.0.0"
-  }
+    "name": "react-component-lib-boilerplate",
+    "version": "1.0.0",
+    "description": "a boilerplate for creating react components library",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook -o docs-build -s ./stories/assets",
+        "chromatic": "chromatic --exit-zero-on-changes",
+        "lint": "eslint --fix '*/**/*.{js,ts,tsx}'",
+        "prepare": "husky install"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ChamsBouzaiene/react-component-lib-boilerplate.git"
+    },
+    "keywords": [
+        "react",
+        "library",
+        "storybook",
+        "components"
+    ],
+    "author": "Chamsddine Bouzaiene",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ChamsBouzaiene/react-component-lib-boilerplate/issues"
+    },
+    "homepage": "https://github.com/ChamsBouzaiene/react-component-lib-boilerplate#readme",
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint"
+        }
+    },
+    "devDependencies": {
+        "@babel/core": "^7.14.2",
+        "@storybook/addon-a11y": "^6.2.9",
+        "@storybook/addon-actions": "^6.2.9",
+        "@storybook/addon-essentials": "^6.2.9",
+        "@storybook/addon-links": "^6.2.9",
+        "@storybook/react": "^6.2.9",
+        "@storybook/storybook-deployer": "^2.8.8",
+        "@types/styled-components": "^5.1.9",
+        "@types/styled-system": "^5.1.11",
+        "@typescript-eslint/eslint-plugin": "^4.23.0",
+        "@typescript-eslint/parser": "^4.23.0",
+        "babel-loader": "^8.2.2",
+        "chromatic": "^5.8.0",
+        "eslint": "^7.26.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.23.0",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.23.2",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "husky": "^6.0.0",
+        "prettier": "^2.3.0",
+        "prop-types": "^15.7.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "storybook-addon-styled-component-theme": "^2.0.0",
+        "styled-components": "^5.3.0",
+        "styled-system": "^5.1.5",
+        "typescript": "^4.2.4"
+    },
+    "dependencies": {}
 }

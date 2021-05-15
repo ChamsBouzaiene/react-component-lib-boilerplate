@@ -1,8 +1,6 @@
-import React from 'react';
-import styled from "styled-components"
-
+import styled from 'styled-components';
 
 export const StyledSvg = styled.svg`
-  display: inline-block;
-  vertical-align: top;
-`
+    display: inline-block;
+    vertical-align: top;
+`;
