@@ -4,7 +4,8 @@
     "description": "a boilerplate for creating react components library",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "jest",
+        "test:watch": "jest --watch",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook -o docs-build -s ./stories/assets",
         "chromatic": "chromatic --exit-zero-on-changes",
@@ -29,7 +30,7 @@
     "homepage": "https://github.com/ChamsBouzaiene/react-component-lib-boilerplate#readme",
     "husky": {
         "hooks": {
-            "pre-commit": "npm run lint"
+            "pre-commit": "npm run lint & npm run test"
         }
     },
     "devDependencies": {
@@ -40,9 +41,12 @@
         "@storybook/addon-links": "^6.2.9",
         "@storybook/react": "^6.2.9",
         "@storybook/storybook-deployer": "^2.8.8",
+        "@testing-library/jest-dom": "^5.12.0",
+        "@testing-library/user-event": "^13.1.9",
+        "@types/jest": "^26.0.23",
         "@types/styled-components": "^5.1.9",
         "@types/styled-system": "^5.1.11",
-        "@typescript-eslint/eslint-plugin": "^4.23.0",
+        "@typescript-eslint/eslint-plugin": "^4.24.0",
         "@typescript-eslint/parser": "^4.23.0",
         "babel-loader": "^8.2.2",
         "chromatic": "^5.8.0",
@@ -54,6 +58,7 @@
         "eslint-plugin-prettier": "^3.4.0",
         "eslint-plugin-react": "^7.23.2",
         "eslint-plugin-react-hooks": "^4.2.0",
+        "eslint-plugin-testing-library": "^4.4.0",
         "husky": "^6.0.0",
         "prettier": "^2.3.0",
         "prop-types": "^15.7.2",
@@ -64,5 +69,10 @@
         "styled-system": "^5.1.5",
         "typescript": "^4.2.4"
     },
-    "dependencies": {}
+    "dependencies": {
+        "@testing-library/react": "^11.2.7",
+        "identity-obj-proxy": "^3.0.0",
+        "jest": "^26.6.3",
+        "ts-jest": "^26.5.6"
+    }
 }

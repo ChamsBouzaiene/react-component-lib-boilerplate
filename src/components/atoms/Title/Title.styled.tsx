@@ -13,6 +13,7 @@ import {
 
 interface Props extends ColorProps, SpaceProps, FontSizeProps, TypographyProps {
     children: React.ReactNode;
+    verticalAlign?: string;
 }
 
 export const StyledTitle = styled('h1')<Props>(
