@@ -31,11 +31,6 @@
         "url": "https://github.com/ChamsBouzaiene/react-component-lib-boilerplate/issues"
     },
     "homepage": "https://github.com/ChamsBouzaiene/react-component-lib-boilerplate#readme",
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run lint & npm run test"
-        }
-    },
     "devDependencies": {
         "@babel/core": "^7.14.2",
         "@rollup/plugin-commonjs": "^19.0.0",
