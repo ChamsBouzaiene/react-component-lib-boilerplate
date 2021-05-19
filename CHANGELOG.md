@@ -1,5 +1,11 @@
 # react-component-lib-boilerplate
 
+## 1.1.3
+
+### Patch Changes
+
+-   73d762c: update release github action
+
 ## 1.1.2
 
 ### Patch Changes
