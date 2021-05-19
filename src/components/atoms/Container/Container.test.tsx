@@ -5,7 +5,7 @@ import { withTheme } from '../../../hocs/withTheme';
 
 const ThemedContainer = withTheme(Container);
 
-test('renders a default Container', async () => {
+test('renders a default Container', () => {
     const { baseElement } = render(<ThemedContainer>TESTING</ThemedContainer>);
     expect(screen.getByText('TESTING')).toBeInTheDocument();
     expect(baseElement).toMatchSnapshot();
