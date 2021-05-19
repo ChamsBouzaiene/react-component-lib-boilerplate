@@ -7,7 +7,7 @@ import userEvent from '@testing-library/user-event';
 const ThemedHeader = withTheme(Header);
 
 describe('Button', () => {
-    test('renders a default header while user is underfined', async () => {
+    test('renders a default header while user is underfined', () => {
         const mockOnLogin = jest.fn();
         const mockOnLogout = jest.fn();
         const mockOnCreateAccount = jest.fn();
@@ -34,7 +34,7 @@ describe('Button', () => {
 
         expect(baseElement).toMatchSnapshot();
     });
-    test('renders a default header while user is defined ', async () => {
+    test('renders a default header while user is defined ', () => {
         const mockOnLogin = jest.fn();
         const mockOnLogout = jest.fn();
         const mockOnCreateAccount = jest.fn();

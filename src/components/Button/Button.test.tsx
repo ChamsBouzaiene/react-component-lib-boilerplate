@@ -6,7 +6,7 @@ import userEvent from '@testing-library/user-event';
 
 const ThemedButton = withTheme(Button);
 describe('Button', () => {
-    test('renders a default button with text', async () => {
+    test('renders a default button with text', () => {
         const { baseElement } = render(<ThemedButton label={'Click me'} />);
 
         expect(screen.getByText('Click me')).toBeInTheDocument();
@@ -16,7 +16,7 @@ describe('Button', () => {
         });
         expect(baseElement).toMatchSnapshot();
     });
-    test('renders a primary button', async () => {
+    test('renders a primary button', () => {
         const { baseElement } = render(<ThemedButton variant="primary" label={'Click me'} />);
 
         expect(screen.getByText('Click me')).toHaveStyle({
@@ -25,7 +25,7 @@ describe('Button', () => {
         });
         expect(baseElement).toMatchSnapshot();
     });
-    test('handles onClick', async () => {
+    test('handles onClick', () => {
         const mockOnClick = jest.fn();
         const { baseElement } = render(<ThemedButton label={'Click Me'} onClick={mockOnClick} />);
         userEvent.click(screen.getByText('Click Me'));
