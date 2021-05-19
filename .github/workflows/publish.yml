@@ -47,14 +47,5 @@ jobs:
       - name: Changelog
         uses: scottbrenner/generate-changelog-action@master
         id: Changelog
-
-      - name: Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@master
         with:
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
-          publish: npm publish --ignore-scripts
-          commit: "release : version package" 
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          to-tag: HEAD
