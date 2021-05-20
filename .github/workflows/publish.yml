@@ -3,11 +3,9 @@
 name: Publish
 
 on:
-  push:
-    branches:
-      - "main"
+  create:
     tags:
-      - '*'
+      - v*
 
 jobs:
   release:

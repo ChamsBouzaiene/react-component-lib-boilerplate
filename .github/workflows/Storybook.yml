@@ -6,8 +6,6 @@ name: 'Deploy StoryBook'
 # Event for the workflow
 on:
   push:
-    branches:
-      - "main"
     tags:
       - '*'
       
