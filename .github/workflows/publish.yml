@@ -4,6 +4,8 @@ name: Publish
 
 on:
   push:
+    branches:
+      - "main"
     tags:
       - '*'
 
@@ -44,9 +46,3 @@ jobs:
           draft: false
           prerelease: false
       
-      - name: Changelog
-        uses: scottbrenner/generate-changelog-action@master
-        id: Changelog
-        with:
-          to-tag: HEAD
-          allow-unknown: true
