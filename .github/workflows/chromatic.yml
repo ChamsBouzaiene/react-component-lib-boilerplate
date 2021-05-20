@@ -9,9 +9,7 @@ on:
       branches:
         - main
 
-    pull_request:
-      branches:
-        - main
+
 
 # List of jobs
 jobs:
