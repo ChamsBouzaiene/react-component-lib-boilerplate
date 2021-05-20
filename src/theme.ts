@@ -59,7 +59,7 @@ export const baseTheme: DefaultTheme = {
     radii: [0, 2, 4, 8],
 };
 
-export const lightTheme: DefaultTheme = {
+const lightTheme: DefaultTheme = {
     ...baseTheme,
     name: 'Light Theme',
     buttons: {
@@ -92,7 +92,7 @@ export const lightTheme: DefaultTheme = {
     },
 };
 
-export const darkTheme: DefaultTheme = {
+const darkTheme: DefaultTheme = {
     ...baseTheme,
     name: 'Dark Theme',
     buttons: {
@@ -124,3 +124,5 @@ export const darkTheme: DefaultTheme = {
         },
     },
 };
+
+export { darkTheme as default, lightTheme };
