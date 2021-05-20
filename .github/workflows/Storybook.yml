@@ -4,7 +4,12 @@
 name: 'Deploy StoryBook'
 
 # Event for the workflow
-on: push
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
 
 # List of jobs
 jobs:

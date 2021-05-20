@@ -1,0 +1,20 @@
+# .github/workflows/changelog.yml
+
+name: Changelog
+
+on: push
+
+jobs:
+  release:
+    name: Changelog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: "enforcer"
+        uses: dangoslen/changelog-enforcer@v2
+        with:
+          changeLogPath: 'CHANGELOG.md'
+          skipLabels: 'Skip-Changelog'
+
