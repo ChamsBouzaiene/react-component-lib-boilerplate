@@ -49,3 +49,4 @@ jobs:
         id: Changelog
         with:
           to-tag: HEAD
+          allow-unknown: true
